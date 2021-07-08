@@ -1,0 +1,16 @@
+main {
+    display: flex;
+}
+.movie {
+    width: 50%;
+    height: 500px;
+}
+
+img {
+    width: 200px;
+}
+
+ul {
+    list-style: none; 
+    padding-left: 0;
+}
