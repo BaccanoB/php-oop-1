@@ -11,11 +11,9 @@
     <?php 
         include __DIR__ . "/classes/movie.php";
         
-        $film1actors = ["Audrey Tautou","Mathieu Kassovitz","Serge Merlin"];
-        $film1 = new Movie("1.jpg","Il favoloso mondo di Amelie","Le Fabuleux destin d'Amélie Poulain","Jean-Pierre Jeunet",$plot,[]);
+        $film1 = new Movie("1.jpg","Il favoloso mondo di Amelie","Le Fabuleux destin d'Amélie Poulain","Jean-Pierre Jeunet",$plot,["Audrey Tautou","Mathieu Kassovitz","Serge Merlin"]);
 
-        $film2actors = [" Robert Downey Jr.","Scarlett Johansson","Chris Evans"];
-        $film2 = new Movie("2.jpg","Avengers:Endgame","Avengers:Endgame","Anthony e Joe Russo",$plot,[]);
+        $film2 = new Movie("2.jpg","Avengers:Endgame","Avengers:Endgame","Anthony e Joe Russo",$plot,[" Robert Downey Jr.","Scarlett Johansson","Chris Evans"]);
     ?>
 
     <main>
@@ -34,7 +32,7 @@
             <p><?= $film1->getPlot(30); ?></p>
             <p>CAST:</p>
             <ul>
-                <?php foreach($film1actors as $actor){
+                <?php foreach($film1->actors as $actor){
                     ?>
                         <li><?= $actor ?>
                         </li>
@@ -58,7 +56,7 @@
             <p><?= $film2->getPlot(50); ?></p>
             <p>CAST:</p>
             <ul>
-                <?php foreach($film2actors as $actor){
+                <?php foreach($film2->actors as $actor){
                     ?>
                         <li><?= $actor ?>
                         </li>
